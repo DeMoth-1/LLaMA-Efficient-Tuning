@@ -130,7 +130,7 @@ class DataArguments:
         self.seed = seed
         dataset_names = [ds.strip() for ds in self.dataset.split(",")] if self.dataset is not None else []
         try:
-            with open(os.path.join(self.dataset_dir, "dataset_info.json"), "r") as f:
+            with open(os.path.join(self.dataset_dir, "dataset_info.json"), "r",encoding='utf-8') as f:
                 dataset_info = json.load(f)
         except Exception:
             if self.dataset is not None:
