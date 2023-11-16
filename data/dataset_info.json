@@ -2,7 +2,8 @@
   "ted_speech_zh": {
     "file_name":"ted_speech_zh.json",
     "columns": {
-      "prompt": "内容"
+      "prompt": "内容",
+      "response": "标题"
     }
   },
   "alpaca_en": {
