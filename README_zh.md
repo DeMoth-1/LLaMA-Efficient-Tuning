@@ -7,6 +7,7 @@
 [![Downloads](https://static.pepy.tech/badge/llmtuner)](https://pypi.org/project/llmtuner/)
 [![GitHub pull request](https://img.shields.io/badge/PRs-welcome-blue)](https://github.com/hiyouga/LLaMA-Factory/pulls)
 [![Discord](https://dcbadge.vercel.app/api/server/c2EPEt5NU?compact=true&style=flat)](https://discord.gg/c2EPEt5NU)
+[![Spaces](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue)](https://huggingface.co/spaces/hiyouga/LLaMA-Board)
 
 👋 加入我们的[微信群](assets/wechat.jpg)。
 
@@ -14,7 +15,9 @@
 
 ## LLaMA Board: 通过一站式网页界面快速上手 LLaMA Factory
 
-使用 `CUDA_VISIBLE_DEVICES=0 python src/train_web.py` 启动 **LLaMA Board**。（该界面目前仅支持单卡训练）
+通过 **[🤗 Spaces](https://huggingface.co/spaces/hiyouga/LLaMA-Board)** 预览 LLaMA Board。
+
+使用 `CUDA_VISIBLE_DEVICES=0 python src/train_web.py` 启动 LLaMA Board。（该模式目前仅支持单卡训练）
 
 下面是使用单张 GPU 在 10 分钟内更改对话式大型语言模型自我认知的示例。
 
@@ -71,7 +74,7 @@ https://github.com/hiyouga/LLaMA-Factory/assets/16256802/6ba60acc-e2e2-4bec-b846
 >
 > 对于所有“基座”（Base）模型，`--template` 参数可以是 `default`, `alpaca`, `vicuna` 等任意值。但“对话”（Chat）模型请务必使用**对应的模板**。
 
-项目所支持模型的完整列表请参阅 [template.py](src/llmtuner/extras/template.py)。
+项目所支持模型的完整列表请参阅 [constants.py](src/llmtuner/extras/constants.py)。
 
 ## 训练方法
 
@@ -79,9 +82,9 @@ https://github.com/hiyouga/LLaMA-Factory/assets/16256802/6ba60acc-e2e2-4bec-b846
 | ---------------------- | ------------------ | ------------------ | ------------------ | ------------------ |
 | 预训练                 | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | 指令监督微调            | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| 奖励模型训练            |                    |                    | :white_check_mark: | :white_check_mark: |
-| PPO 训练               |                    |                    | :white_check_mark: | :white_check_mark: |
-| DPO 训练               | :white_check_mark: |                    | :white_check_mark: | :white_check_mark: |
+| 奖励模型训练            | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| PPO 训练               | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| DPO 训练               | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 > [!NOTE]
 > 请使用 `--quantization_bit 4/8` 参数来启用 QLoRA 训练。
@@ -122,6 +125,7 @@ https://github.com/hiyouga/LLaMA-Factory/assets/16256802/6ba60acc-e2e2-4bec-b846
 - [OpenPlatypus (en)](https://huggingface.co/datasets/garage-bAInd/Open-Platypus)
 - [CodeAlpaca 20k (en)](https://huggingface.co/datasets/sahil2801/CodeAlpaca-20k)
 - [Alpaca CoT (multilingual)](https://huggingface.co/datasets/QingyiSi/Alpaca-CoT)
+- [OpenOrca (en)](https://huggingface.co/datasets/Open-Orca/OpenOrca)
 - [MathInstruct (en)](https://huggingface.co/datasets/TIGER-Lab/MathInstruct)
 - [Firefly 1.1M (zh)](https://huggingface.co/datasets/YeungNLP/firefly-train-1.1M)
 - [Web QA (zh)](https://huggingface.co/datasets/suolyer/webqa)
